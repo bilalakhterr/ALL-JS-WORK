@@ -1,0 +1,49 @@
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration:underline;
+    color: rgb(221, 7, 7);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0px auto;
+  }
+  
+  
+  .box {
+    color: rgb(0, 0, 0);
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 40px;
+  }
+  .box:hover {
+    background-color: rgb(116, 96, 96);
+    color: white;
+    box-shadow: 120px yellow;
+  }
+  
+  .info_box {
+    color: white;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .msg {
+    text-align: center;
+  }
