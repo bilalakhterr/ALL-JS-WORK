@@ -1,0 +1,22 @@
+p {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+    color: rgb(225, 237, 237);
+    padding-top: px;
+    /* background-color: rgb(4, 35, 62); */
+  margin-top: 180px;
+  
+  }
+
+body{
+    background-color: black;
+ }
+
+h1{
+   color: rgb(202, 11, 11);
+   text-align: center;
+   justify-content: center;
+   padding: 29px;
+   font-size: 70px;
+}
