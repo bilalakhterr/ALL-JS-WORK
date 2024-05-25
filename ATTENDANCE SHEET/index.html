@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Attendance Sheet</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  .header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .status-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .present {
+    background-color: #28a745;
+    color: white;
+  }
+  .absent {
+    background-color: #dc3545;
+    color: white;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Student Attendance Sheet</h1>
+  </div>
+  <table id="attendanceTable">
+    <tr>
+      <th>Student Name</th>
+      <th>Father's Name</th>
+      <th>Status</th>
+    </tr>
+    <!-- Repeat this row for each student -->
+    <tr>
+      <td>Mike Morgan</td>
+      <td>Peter Morgan</td>
+      <td>
+        <button class="status-button present" onclick="markPresent(this)">Present</button>
+        <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+      </td>
+    </tr><tr>
+        <td>Ella Baker</td>
+        <td>Ryan Baker</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Andrew Adams</td>
+        <td>Jason Adams</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Samantha Green</td>
+        <td>Shawn Green</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Jacob Scott</td>
+        <td>Chris Scott</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Ava Lopez</td>
+        <td>Timothy Lopez</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Ethan Wright</td>
+        <td>Stanley Wright</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Mia King</td>
+        <td>Joe King</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Michael Bevan</td>
+        <td>John Bevan</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Nathan Hernandez</td>
+        <td>Larry Hernandez</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Olivia Young</td>
+        <td>Bruce Young</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Justin Allen</td>
+        <td>Patrick Allen</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Grace Hall</td>
+        <td>Peter Hall</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Christopher Walker</td>
+        <td>Frank Walker</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Sophia Lewis</td>
+        <td>Henry Lewis</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Brian Clark</td>
+        <td>Edward Clark</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Anna Harris</td>
+        <td>Steven Harris</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Kevin White</td>
+        <td>Mark White</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Laura Martin</td>
+        <td>Paul Martin</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>David Lee</td>
+        <td>George Lee</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Sarah Taylor</td>
+        <td>Andrew Taylor</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Daniel Wilson</td>
+        <td>Thomas Wilson</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Jessica Brown</td>
+        <td>Charles Brown</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Emily Davis</td>
+        <td>William Davis</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr><tr>
+        <td>Michael Johnson</td>
+        <td>James Johnson</td>
+        <td>
+          <button class="status-button present" onclick="markPresent(this)">Present</button>
+          <button class="status-button absent" onclick="markAbsent(this)">Absent</button>
+        </td>
+      </tr>
+    <!-- End of student row -->
+  </table>
+</div>
+
+<script>
+  function markPresent(button) {
+    button.parentNode.querySelectorAll('.status-button').forEach(btn => btn.style.opacity = '0.5');
+    button.style.opacity = '1';
+  }
+
+  function markAbsent(button) {
+    button.parentNode.querySelectorAll('.status-button').forEach(btn => btn.style.opacity = '0.5');
+    button.style.opacity = '1';
+  }
+</script>
+</body>
+</html>
